@@ -1,5 +1,17 @@
-import '@/styles/globals.css'
+import MainLayout from '../src/components/layout/main-layout';
+import '../styles/globals.css';
+import '../styles/general.sass';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
+    </>
+  );
 }
+export default MyApp;
+
+//this _app file is use for share the template for all pages
+//this file children is at componnet layout folder
